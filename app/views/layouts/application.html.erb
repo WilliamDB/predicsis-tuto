@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PredicSis Tutorial</title>
+  <%= render 'layouts/include_tag' %>
+  
+  <%= csrf_meta_tags %>
+
+  <link <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="//getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->  
+</head>
+<body>
+<div class="home-header">
+<br />
+  <img src="/images/logo_predicsis.png"  />
+</div>
+<div class="container">
+  <div class="vertical-menu">
+    <div class="tuto-message">
+      Machine Learning <br />
+      API Tuturial
+    </div> 
+    <br /><br />
+    <div class="list-group">
+      <a href="/" class="list-group-item <%= current_selected?('overview') %>">Overview</a>
+      <a href="/upload" class="list-group-item <%= current_selected?('upload') %>">Data Upload</a>
+      <a href="/variable" class="list-group-item <%= current_selected?('variable') %>">Variables</a>
+      <a href="/model" class="list-group-item <%= current_selected?('model') %>">Model</a>
+      <a href="/report" class="list-group-item <%= current_selected?('report') %>">Report</a>
+      <a href="/scoring" class="list-group-item <%= current_selected?('scoring') %>">Scoring</a>
+      <!-- <%= link_to "Scoring", scoring_path, :class => "list-group-item current_selected?('scoring')" %>   -->
+    </div>
+  </div>
+  <div class="display-area">
+    <%= yield %>
+  </div>
+</div>  
+</body>
+</html>

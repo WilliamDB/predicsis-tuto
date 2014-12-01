@@ -1,0 +1,22 @@
+<script>
+  $(document).ready(function() {
+    ajax_request('credential');     
+  });
+
+  function ajax_request(uri){   
+    $.ajax({
+      type: 'GET',
+      format: 'js',
+      url: '/' + uri,
+      success: function(data){
+      }
+    });
+  }
+</script>
+
+<div id="step-wrapper" style="width:500px;height:300px;">
+  &nbsp;
+</div>
+
+<a href="Javascript:ajax_request('credential');" class="btn btn-primary">&lt;</a>
+<a href="Javascript:ajax_request('source');" class="btn btn-primary">&gt;</a>
